@@ -1,0 +1,29 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "\"Burger app that let's you use MySQL to log eaten burgers. Runs locally\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjwall/burger.git"
+  },
+  "keywords": [
+    "burger"
+  ],
+  "author": "Jacob Wallace",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjwall/burger/issues"
+  },
+  "homepage": "https://github.com/jjwall/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.8",
+    "mysql": "^2.13.0"
+  }
+}
