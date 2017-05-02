@@ -2,7 +2,7 @@
   "name": "burger",
   "version": "1.0.0",
   "description": "\"Burger app that let's you use MySQL to log eaten burgers. Runs locally\"",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
