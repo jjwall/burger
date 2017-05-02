@@ -7,10 +7,25 @@
 <h2> {{this.burgers}} <h2>
 <h2> {{devoured}} </h2>
 
+<h2>Add a Burger</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="burger_name">
+  </div>
+
+  <div class="form-group">
+    <input type="hidden" name="devoured" value="0"><br>
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
+
 <ul>
   {{#each burger}}
     {{#unless this.devoured}}
-      <li>
+      <li class = "uneaten">
        {{this.burger_name}}
 
         <form action="/{{this.id}}?_method=PUT" method="POST">
@@ -28,7 +43,7 @@
 <ul>
   {{#each burger}}
     {{#if this.devoured}}
-      <li>
+      <li class = "eaten">
       {{this.burger_name}}
 
         <form action="/{{this.id}}?_method=PUT" method="POST">
@@ -41,18 +56,4 @@
   {{/each}}
 </ul>
 
-<h2>Add a Burger</h2>
-<form class="create-update-form" action="/" method="POST">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="burger_name">
-  </div>
-
-  <div class="form-group">
-    <input type="hidden" name="devoured" value="0"><br>
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
-
+<div id = "footer"></div>

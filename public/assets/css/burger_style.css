@@ -2,7 +2,13 @@ body {
 	background: #AB7A49;
 }
 
-li {
+.uneaten {
+  padding: 5px;
+  margin: 5px;
+  background: #fce010;
+}
+
+.eaten {
   padding: 5px;
   margin: 5px;
   background: #8B4513;
@@ -25,4 +31,18 @@ li {
 #image {
 	padding: 50px 50px 50px 50px;
 	background: url(../img/burger.png);
+}
+
+#footer {
+	padding: 50px 50px 50px 50px;
+	background: url(../img/burger.png);
+}
+
+#footer {
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
 }
