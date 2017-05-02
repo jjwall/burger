@@ -2,23 +2,38 @@
 
 <h2>Choose from this delectable list, a burger to devour!!</h2>
 
-<h1> {{burger_name}} <h1>
+<h2> {{this.burgers}} <h2>
 <h2> {{devoured}} </h2>
 
 <ul>
-  {{#each burgers}}
+  {{#each burger}}
     {{#unless this.devoured}}
       <li>
-       
+       {{this.burger_name}}
 
         <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="sleepy" value="true">
+          <input type="hidden" name="devoured" value="true">
           <button type="submit">Devour!</button>
         </form>
-
         
       </li>
     {{/unless}}
+  {{/each}}
+</ul>
+
+<ul>
+  {{#each burger}}
+    {{#if this.devoured}}
+      <li>
+      {{this.burger_name}}
+      
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="false">
+          <button type="submit">Regurgetate!</button>
+        </form>
+
+      </li>
+    {{/if}}
   {{/each}}
 </ul>
 
